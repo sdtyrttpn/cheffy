@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #eb2c1a;
+  --secondary: #f7c526;
+  --dark: #0b1120;
+  --light: #f9fafb;
+}
+
+@theme {
+  --color-primary: #eb2c1a;
+  --color-primary-hover: rgba(235, 44, 26, 0.1);
+
+  --color-secondary: #f7c526;
+
+  --color-dark: #0b1120;
+
+  --color-light: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-poppins);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas);
+}

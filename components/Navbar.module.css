@@ -1,0 +1,35 @@
+.nav {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.nav_link {
+  display: flex;
+  gap: 0.5rem;
+  transition: all 200ms ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.nav_link:hover {
+  color: var(--primary);
+  background-color: var(--color-primary-hover);
+}
+
+.nav_dropdown_title {
+  position: relative;
+}
+
+.nav_dropdown_title ul {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav_dropdown_title:hover ul {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
