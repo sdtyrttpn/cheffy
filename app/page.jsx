@@ -11,13 +11,14 @@ import MealCard from "@/components/MealCard";
 import Newsletter from "@/components/Newsletter";
 
 export default async function HomePage() {
-  const categoryData = await categoryInfo();
+  const [categoryData, cuisinesData, featuredMeals] = await Promise.all([
+    categoryInfo(),
+    cuisinesInfo(),
+    mealsByLetter("a"),
+  ]);
+
   const slicedCategoryData = categoryData.slice(0, 6);
-
-  const cuisinesData = await cuisinesInfo();
   const slicedCuisinesData = cuisinesData.slice(0, 6);
-
-  const featuredMeals = await mealsByLetter("a");
   const slicedFeaturedMeals = featuredMeals.slice(0, 6);
 
   return (
@@ -30,11 +31,11 @@ export default async function HomePage() {
               Browse categories or explore cuisines.
             </h2>
             <div className="flex items-center flex-col gap-2 lg:flex-row">
-              <Link href="/categories" className="w-full lg:w-auto">
-                <button className="btn-primary w-full">Browse Categories</button>
+              <Link href="/categories" className="w-full btn-primary lg:w-auto">
+                Browse Categories
               </Link>
-              <Link href="/cuisines" className="w-full lg:w-auto">
-                <button className="btn-secondary w-full">Explore Cuisines</button>
+              <Link href="/cuisines" className="w-full btn-secondary lg:w-auto">
+                Explore Cuisines
               </Link>
             </div>
           </div>
@@ -46,6 +47,7 @@ export default async function HomePage() {
               alt="Discover meals from around the world"
               fill
               className="object-cover"
+              priority
             />
           </div>
         </div>
