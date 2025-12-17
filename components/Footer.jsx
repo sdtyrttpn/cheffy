@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, Instagram, Facebook } from "lucide-react";
+import { siX, siInstagram, siFacebook } from "simple-icons";
 
 export default function Footer() {
   return (
@@ -40,31 +40,43 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* social links and attribution */}
+        {/* social links */}
         <div className="flex flex-col gap-2">
           <div>
             <h4 className="font-semibold mb-4 uppercase tracking-wider text-sm">Follow</h4>
+
             <div className="flex gap-4">
               <a
-                href="https://twitter.com/"
+                href="https://x.com/"
                 target="_blank"
+                aria-label="X"
                 className="hover:text-primary transition"
               >
-                <Twitter size={20} />
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" role="img">
+                  <path d={siX.path} />
+                </svg>
               </a>
+
               <a
                 href="https://instagram.com/"
                 target="_blank"
+                aria-label="Instagram"
                 className="hover:text-primary transition"
               >
-                <Instagram size={20} />
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" role="img">
+                  <path d={siInstagram.path} />
+                </svg>
               </a>
+
               <a
                 href="https://www.facebook.com"
                 target="_blank"
+                aria-label="Facebook"
                 className="hover:text-primary transition"
               >
-                <Facebook size={20} />
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" role="img">
+                  <path d={siFacebook.path} />
+                </svg>
               </a>
             </div>
           </div>

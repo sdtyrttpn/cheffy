@@ -218,6 +218,7 @@ export default function Navbar() {
                   href="/profile"
                   className={`${styles.nav_link} flex gap-1`}
                   onClick={() => setMainDropdown(false)}
+                  aria-label="Profile"
                 >
                   <User className="hidden lg:block" />
                   <span className="lg:hidden">Profile</span>
@@ -229,6 +230,7 @@ export default function Navbar() {
                   href="/favorites"
                   className={`${styles.nav_link} flex gap-1`}
                   onClick={() => setMainDropdown(false)}
+                  aria-label="Favorites"
                 >
                   <Bookmark className="hidden lg:block" />
                   <span className="lg:hidden">Favorites</span>

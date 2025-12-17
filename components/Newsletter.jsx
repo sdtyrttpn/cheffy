@@ -13,6 +13,7 @@ export default function Newsletter() {
         <input
           type="email"
           className="min-w-0 bg-white outline outline-gray-400 shadow-sm rounded-md p-3 flex-1"
+          aria-label="Email address"
         />
 
         <button
