@@ -4,6 +4,18 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MapPin, Utensils } from "lucide-react";
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const meal = await mealDetails(slug);
+
+  if (!meal) return { title: "Meal not found | Cheffy" };
+
+  return {
+    title: `${meal.mealName} Recipe | Cheffy`,
+    description: `How to cook ${meal.mealName}. Ingredients, steps and tips.`,
+  };
+}
+
 export default async function MealDetailsPage({ params }) {
   const { slug } = await params;
   const meal = await mealDetails(slug);

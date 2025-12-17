@@ -2,6 +2,11 @@ import cuisineInfo from "@/lib/api/cuisinesInfo";
 import CuisineCard from "@/components/CuisineCard";
 import Header from "@/components/Header";
 
+export const metadata = {
+  title: "Cuisines | Cheffy",
+  description: "Explore world cuisines and discover traditional meals from different cultures.",
+};
+
 export default async function CuisinesPage() {
   const cuisines = await cuisineInfo();
   return (

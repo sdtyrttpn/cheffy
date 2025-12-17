@@ -2,6 +2,16 @@ import cuisineMeals from "@/lib/api/cuisineMeals";
 import MealCard from "@/components/MealCard";
 import Header from "@/components/Header";
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const title = decodeURIComponent(slug);
+
+  return {
+    title: `${title} Cuisine | Cheffy`,
+    description: `Explore traditional ${title} meals and recipes.`,
+  };
+}
+
 export default async function CuisinePage({ params }) {
   const { slug } = await params;
   const title = decodeURIComponent(slug);

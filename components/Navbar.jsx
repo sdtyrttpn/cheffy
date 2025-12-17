@@ -6,7 +6,7 @@ import { User, Bookmark, Search, ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import categoryInfo from "@/lib/api/categoryInfo";
 import cuisinesInfo from "@/lib/api/cuisinesInfo";
-import logo from "@/public/logo.webp";
+import logo from "@/public/logo.png";
 import styles from "./Navbar.module.css";
 import randomMeal from "@/lib/api/randomMeal";
 import searchedMeal from "@/lib/api/searchedMeal";

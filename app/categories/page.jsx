@@ -2,6 +2,14 @@ import categoryInfo from "@/lib/api/categoryInfo";
 import Header from "@/components/Header";
 import CategoryCard from "@/components/CategoryCard";
 
+export async function generateMetadata() {
+  return {
+    title: `Categories | Cheffy`,
+    description: `Explore meal categories and discover recipes from different cuisines around the world.
+`,
+  };
+}
+
 export default async function CategoriesPage() {
   const data = await categoryInfo();
 

@@ -2,6 +2,17 @@ import categoryMeals from "@/lib/api/categoryMeals";
 import MealCard from "@/components/MealCard";
 import Header from "@/components/Header";
 
+export async function generateMetadata({ params }) {
+  const { categorySlug } = await params;
+  const title = decodeURIComponent(categorySlug);
+
+  return {
+    title: `${title} Recipes | Cheffy`,
+    description: `Discover delicious ${title} recipes including quick meals, healthy dishes, and classic favorites.
+`,
+  };
+}
+
 export default async function CategoryPage({ params }) {
   const { categorySlug } = await params;
   const meals = await categoryMeals(categorySlug);

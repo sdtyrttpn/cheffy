@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CategoryCard({ category }) {
   return (
-    <Link href={`/categories/${category.categoryName.toLowerCase().replace(/\s+/g, "-")}`}>
+    <Link href={`/categories/${category.categoryName.replace(/\s+/g, "-")}`}>
       <div className="group relative shadow-sm text-center overflow-hidden bg-cover bg-center transition rounded-xl">
         {/* image */}
         <img
