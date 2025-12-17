@@ -39,7 +39,7 @@ export default async function MealDetailsPage({ params }) {
 
           <div className="">
             {/* title */}
-            <h1 className="text-6xl font-bold text-dark mb-4">{meal.mealName}</h1>
+            <h1 className="text-4xl font-bold text-dark mb-4 sm:text-6xl">{meal.mealName}</h1>
 
             {/* category and cuisine pill */}
             <div className="flex items-center gap-2 my-4">

@@ -19,20 +19,14 @@ export default function CategoriesPage() {
           ))}
         </main>
       ) : (
-        <div className="min-h-[50vh] flex flex-col items-center justify-center gap-4 px-4 text-center">
+        <div className="min-h-[50vh] flex flex-col items-stretch justify-center gap-4 px-4 text-center">
           <p className="text-gray-500 text-xl">No favorites yet, start exploring meals you love.</p>
-          <div className="flex items-center gap-2">
-            <Link
-              href="/categories"
-              className="inline-flex items-center justify-center rounded-xl bg-primary text-light px-5 py-3 font-semibold hover:bg-primary/90 transition text-center truncate"
-            >
-              Browse Categories
+          <div className="flex flex-col items-stretch justify-center gap-2 lg:flex-row ">
+            <Link href="/categories">
+              <button className="btn-primary w-full">Browse Categories</button>
             </Link>
-            <Link
-              href="/cuisines"
-              className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white text-dark px-5 py-3 font-semibold hover:bg-gray-50 transition text-center truncate"
-            >
-              Explore Cuisines
+            <Link href="/cuisines">
+              <button className="btn-secondary w-full">Explore Cuisines</button>
             </Link>
           </div>
         </div>

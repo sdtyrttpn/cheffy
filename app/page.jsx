@@ -29,18 +29,12 @@ export default async function HomePage() {
             <h2 className="font-semibold text-2xl text-dark/80">
               Browse categories or explore cuisines.
             </h2>
-            <div className="flex items-center gap-2">
-              <Link
-                href="/categories"
-                className="inline-flex items-center justify-center rounded-xl bg-primary text-light px-5 py-3 font-semibold hover:bg-primary/90 transition text-center truncate"
-              >
-                Browse Categories
+            <div className="flex items-center flex-col gap-2 lg:flex-row">
+              <Link href="/categories" className="w-full lg:w-auto">
+                <button className="btn-primary w-full">Browse Categories</button>
               </Link>
-              <Link
-                href="/cuisines"
-                className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white text-dark px-5 py-3 font-semibold hover:bg-gray-50 transition text-center truncate"
-              >
-                Explore Cuisines
+              <Link href="/cuisines" className="w-full lg:w-auto">
+                <button className="btn-secondary w-full">Explore Cuisines</button>
               </Link>
             </div>
           </div>
@@ -60,7 +54,7 @@ export default async function HomePage() {
         {/* featured meals section */}
         <section className="border-b border-gray-300 py-8">
           <div className="container mx-auto px-4 flex flex-col gap-4">
-            <h2 className="font-bold text-4xl text-dark/90">Featured Meals</h2>
+            <h2 className="font-bold text-4xl">Featured Meals</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
               {slicedFeaturedMeals.map((meal) => (
                 <MealCard key={meal.mealId} meal={meal} />
@@ -78,7 +72,7 @@ export default async function HomePage() {
         {/* featured categories section */}
         <section className="border-b border-gray-300 py-8">
           <div className="container mx-auto px-4 flex flex-col gap-4">
-            <h2 className="font-bold text-4xl text-dark/90">Featured Categories</h2>
+            <h2 className="font-bold text-4xl">Featured Categories</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
               {slicedCategoryData.map((c) => (
                 <CategoryCard key={c.categoryName} category={c} />
@@ -96,7 +90,7 @@ export default async function HomePage() {
         {/* featured cuisines section */}
         <section className="border-b border-gray-300 py-8">
           <div className="container mx-auto px-4 flex flex-col gap-4">
-            <h2 className="font-bold text-4xl text-dark/90">Featured Cuisines</h2>
+            <h2 className="font-bold text-4xl">Featured Cuisines</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
               {slicedCuisinesData.map((c) => (
                 <CuisineCard key={c.cuisineName} cuisine={c} />

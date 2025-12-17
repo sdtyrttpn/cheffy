@@ -215,7 +215,7 @@ export default function Navbar() {
               {/* profile link */}
               <li>
                 <Link
-                  href="/"
+                  href="/profile"
                   className={`${styles.nav_link} flex gap-1`}
                   onClick={() => setMainDropdown(false)}
                 >

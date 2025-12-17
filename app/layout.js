@@ -28,7 +28,7 @@ const bebas = Bebas_Neue({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} ${bebas.variable}`}>
-      <body className="bg-light min-h-screen">
+      <body className="bg-light text-dark min-h-screen">
         <FavoritesProvider>
           <Navbar />
           {children}
